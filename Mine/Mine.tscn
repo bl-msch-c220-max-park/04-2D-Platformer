@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/enemyWalking_1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/enemyWalking_3.png" type="Texture" id=2]
+[ext_resource path="res://Mine/Mine.gd" type="Script" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Enemy" type="Area2D"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 6.7005, 9.57214 )
+scale = Vector2( 1.5, 1.5 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( -0.692758, 0.72611 )
+scale = Vector2( 0.892262, 0.689657 )
+polygon = PoolVector2Array( -0.177774, -107.34, -58.4663, -47.6576, -75.2734, 88.3621, 81.3546, 98.0778, 79.9242, -48.5829 )
+
+[connection signal="body_entered" from="." to="." method="_on_Mine_body_entered"]

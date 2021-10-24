@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Mine/Mine.gd" type="Script" id=1]
+[ext_resource path="res://Mine/Mine.tscn" type="PackedScene" id=2]
+
+[node name="Enemy2" type="Node2D"]
+
+[node name="Ailen" type="Area2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 526.855, 438.243 )
+scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+
+[connection signal="body_entered" from="Ailen" to="Ailen" method="_on_Mine_body_entered"]

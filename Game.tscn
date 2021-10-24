@@ -1,0 +1,368 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://Coin/Coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Mine/Mine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/Menu.gd" type="Script" id=4]
+[ext_resource path="res://Assets/spritesheet_tiles.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Shinrin-Yoku.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Assets/ladderNarrow_mid.png" type="Texture" id=7]
+[ext_resource path="res://Exit.gd" type="Script" id=8]
+[ext_resource path="res://Player/Player_Container.gd" type="Script" id=12]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 3, 32, 3, 32, 3, 32, 3, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 65, 0, 65, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=6]
+points = PoolVector2Array( 0, 0, 65, 0, 65, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=7]
+points = PoolVector2Array( 0, 0, 65, 0, 65, 32, 0, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=8]
+points = PoolVector2Array( 0, 0, 65, 0, 65, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=9]
+points = PoolVector2Array( 0, 0, 65, 0, 65, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 11, 65, 11, 65, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 11, 65, 11, 65, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
+points = PoolVector2Array( 0, 11, 65, 11, 65, 64, 0, 64 )
+
+[sub_resource type="TileSet" id=13]
+0/name = "icon.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/occluder = SubResource( 1 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 2 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 2 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+1/name = "spritesheet_tiles.png 1"
+1/texture = ExtResource( 5 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 195, 256, 65, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape = SubResource( 4 )
+1/shape_one_way = false
+1/shape_one_way_margin = 1.0
+1/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 4 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+1/z_index = 0
+2/name = "spritesheet_tiles.png 2"
+2/texture = ExtResource( 5 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 130, 0, 65, 32 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape = SubResource( 6 )
+2/shape_one_way = false
+2/shape_one_way_margin = 1.0
+2/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 6 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 7 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+2/z_index = 0
+3/name = "spritesheet_tiles.png 3"
+3/texture = ExtResource( 5 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 260, 0, 65, 64 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 8 )
+3/shape_one_way = false
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 8 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+3/z_index = 0
+4/name = "spritesheet_tiles.png 4"
+4/texture = ExtResource( 5 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 260, 640, 65, 64 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape = SubResource( 9 )
+4/shape_one_way = false
+4/shape_one_way_margin = 1.0
+4/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 9 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 10 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 12 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+4/z_index = 0
+
+[node name="Game" type="Node2D"]
+
+[node name="Game_Background" type="ColorRect" parent="."]
+margin_left = -230.0
+margin_top = -817.0
+margin_right = 3964.0
+margin_bottom = 756.0
+color = Color( 0.462745, 0.682353, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 13 )
+format = 1
+tile_data = PoolIntArray( -720896, 3, 0, -720895, 3, 0, -720894, 3, 0, -720893, 3, 0, -720892, 3, 0, -720891, 3, 0, -720890, 3, 0, -720889, 3, 0, -720888, 3, 0, -720887, 3, 0, -720886, 3, 0, -720885, 3, 0, -720884, 3, 0, -720883, 3, 0, -720882, 3, 0, -720881, 3, 0, -720880, 3, 0, -720879, 3, 0, -720878, 3, 0, -720877, 3, 0, -720876, 3, 0, -720875, 3, 0, -720874, 3, 0, -720873, 3, 0, -720872, 3, 0, -720871, 3, 0, -720870, 3, 0, -720869, 3, 0, -720868, 3, 0, -720867, 3, 0, -720866, 3, 0, -720865, 3, 0, -720864, 3, 0, -720863, 3, 0, -720862, 3, 0, -720861, 3, 0, -720860, 3, 0, -720859, 3, 0, -720858, 3, 0, -720857, 3, 0, -720856, 3, 0, -720855, 3, 0, -720854, 3, 0, -720853, 3, 0, -720852, 3, 0, -720851, 3, 0, -720850, 3, 0, -720849, 3, 0, -720848, 3, 0, -720847, 3, 0, -720846, 3, 0, -720845, 3, 0, -720844, 3, 0, -720843, 3, 0, -720842, 3, 0, -720841, 3, 0, -720840, 3, 0, -720839, 3, 0, -720838, 3, 0, -655360, 3, 0, -655302, 3, 0, -589824, 3, 0, -589766, 3, 0, -524288, 3, 0, -524230, 3, 0, -458752, 3, 0, -458694, 3, 0, -393216, 3, 0, -393158, 3, 0, -327680, 3, 0, -327622, 3, 0, -196609, 3, 0, -262144, 3, 0, -262086, 3, 0, -131073, 3, 0, -196608, 3, 0, -196550, 3, 0, -65537, 3, 0, -131072, 3, 0, -131014, 3, 0, -1, 3, 0, -65536, 3, 0, -65524, 4, 0, -65523, 4, 0, -65522, 4, 0, -65512, 4, 0, -65511, 4, 0, -65510, 4, 0, -65478, 3, 0, 65535, 3, 0, 0, 3, 0, 58, 3, 0, 131071, 3, 0, 65536, 3, 0, 65545, 4, 0, 65594, 3, 0, 196607, 3, 0, 131072, 3, 0, 131081, 4, 0, 131088, 4, 0, 131094, 4, 0, 131100, 4, 0, 131103, 4, 0, 131106, 4, 0, 131122, 4, 0, 131123, 4, 0, 131124, 4, 0, 131130, 3, 0, 196608, 3, 0, 196620, 4, 0, 196621, 4, 0, 196627, 4, 0, 196656, 4, 0, 196660, 4, 0, 196666, 3, 0, 262144, 3, 0, 262156, 4, 0, 262157, 4, 0, 262191, 4, 0, 262196, 4, 0, 262202, 3, 0, 327680, 3, 0, 327681, 2, 0, 327682, 2, 0, 327683, 2, 0, 327684, 2, 0, 327704, 4, 0, 327705, 4, 0, 327706, 4, 0, 327707, 4, 0, 327716, 4, 0, 327717, 4, 0, 327732, 4, 0, 327738, 3, 0, 393216, 3, 0, 393235, 4, 0, 393236, 4, 0, 393260, 4, 0, 393268, 4, 0, 393274, 3, 0, 458752, 3, 0, 458770, 4, 0, 458771, 4, 0, 458772, 4, 0, 458773, 4, 0, 458795, 4, 0, 458796, 4, 0, 458797, 4, 0, 458804, 4, 0, 458810, 3, 0, 524288, 3, 0, 524305, 4, 0, 524306, 4, 0, 524307, 4, 0, 524308, 4, 0, 524309, 4, 0, 524310, 4, 0, 524317, 4, 0, 524318, 4, 0, 524330, 4, 0, 524331, 4, 0, 524332, 4, 0, 524333, 4, 0, 524334, 4, 0, 524340, 4, 0, 524346, 3, 0, 589824, 3, 0, 589825, 2, 0, 589826, 2, 0, 589827, 2, 0, 589828, 2, 0, 589829, 2, 0, 589830, 2, 0, 589831, 2, 0, 589832, 2, 0, 589833, 2, 0, 589834, 2, 0, 589835, 2, 0, 589836, 2, 0, 589837, 2, 0, 589838, 2, 0, 589839, 2, 0, 589840, 2, 0, 589841, 2, 0, 589842, 2, 0, 589843, 2, 0, 589844, 2, 0, 589845, 2, 0, 589846, 2, 0, 589847, 2, 0, 589848, 2, 0, 589849, 2, 0, 589850, 2, 0, 589851, 2, 0, 589852, 2, 0, 589853, 2, 0, 589854, 2, 0, 589855, 2, 0, 589856, 2, 0, 589857, 2, 0, 589858, 2, 0, 589859, 2, 0, 589860, 2, 0, 589861, 2, 0, 589862, 2, 0, 589863, 2, 0, 589864, 2, 0, 589865, 2, 0, 589866, 2, 0, 589867, 2, 0, 589868, 2, 0, 589869, 2, 0, 589870, 2, 0, 589871, 2, 0, 589872, 2, 0, 589873, 2, 0, 589874, 2, 0, 589875, 2, 0, 589876, 2, 0, 589877, 2, 0, 589878, 2, 0, 589879, 2, 0, 589880, 2, 0, 589881, 2, 0, 589882, 2, 0 )
+
+[node name="Player_Container" type="Node2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="Backup_Camera" type="Camera2D" parent="Player_Container"]
+position = Vector2( 200, 200 )
+current = true
+limit_left = 0
+limit_right = 3760
+limit_bottom = 600
+
+[node name="Coins" type="Node2D" parent="."]
+
+[node name="Coin" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 150, 500 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3173.18, 262.171 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3033.68, -92.2869 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 2736.4, 156.977 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 2377.36, 497.713 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 2507.71, -39.6899 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 668.509, 349.161 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 1674.71, 175.363 )
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 2 )]
+position = Vector2( 3536.18, 198.231 )
+
+[node name="Enemy" type="Node2D" parent="."]
+
+[node name="Mine" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 300.336, 558.264 )
+
+[node name="Mine2" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 1135.95, 286.363 )
+
+[node name="Mine3" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 1632.12, -99.0578 )
+
+[node name="Mine4" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 1616.46, 303.267 )
+
+[node name="Mine5" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 1660.75, 546.69 )
+
+[node name="Mine6" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 2234.87, 543.31 )
+
+[node name="Mine7" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 3150.98, 369.194 )
+
+[node name="Mine8" parent="Enemy" instance=ExtResource( 3 )]
+position = Vector2( 3479.71, 545 )
+
+[node name="Enemy2" type="Node2D" parent="."]
+
+[node name="Ailen" parent="Enemy2" instance=ExtResource( 3 )]
+position = Vector2( 526.855, 438.243 )
+
+[node name="Explosions" type="Node2D" parent="."]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="UI/HUD"]
+margin_right = 1024.0
+margin_bottom = 30.0
+color = Color( 0, 0, 0, 0.501961 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="UI/HUD"]
+margin_left = 10.0
+margin_right = 512.0
+margin_bottom = 30.0
+text = "Score: "
+valign = 1
+
+[node name="Health" type="Label" parent="UI/HUD"]
+margin_left = 512.0
+margin_right = 1014.0
+margin_bottom = 31.0
+text = "Health: "
+align = 2
+valign = 1
+
+[node name="Menu" type="Control" parent="UI"]
+pause_mode = 2
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background" type="ColorRect" parent="UI/Menu"]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="Save" type="Button" parent="UI/Menu"]
+margin_left = 412.0
+margin_top = 200.0
+margin_right = 612.0
+margin_bottom = 240.0
+text = "Save Game"
+
+[node name="Load" type="Button" parent="UI/Menu"]
+margin_left = 412.0
+margin_top = 250.0
+margin_right = 612.0
+margin_bottom = 290.0
+text = "Load Game"
+
+[node name="Quit" type="Button" parent="UI/Menu"]
+margin_left = 412.0
+margin_top = 400.0
+margin_right = 612.0
+margin_bottom = 440.0
+text = "Quit Game"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -25.732
+autoplay = true
+
+[node name="Exit" type="Area2D" parent="."]
+position = Vector2( 3652.86, 544.925 )
+script = ExtResource( 8 )
+
+[node name="Sprite" type="Sprite" parent="Exit"]
+texture = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Exit"]
+polygon = PoolVector2Array( 28, 32, 12, 32, 12, 20, -12, 20, -12, 32, -28, 32, -28, -32, 28, -32 )
+
+[connection signal="pressed" from="UI/Menu/Save" to="UI/Menu" method="_on_Save_pressed"]
+[connection signal="pressed" from="UI/Menu/Load" to="UI/Menu" method="_on_Load_pressed"]
+[connection signal="pressed" from="UI/Menu/Quit" to="UI/Menu" method="_on_Quit_pressed"]
+[connection signal="body_entered" from="Exit" to="Exit" method="_on_Exit_body_entered"]

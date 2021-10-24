@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Shinrin-Yoku.ogg-0653be3c731246040f522d63aa40a463.oggstr"
+
+[deps]
+
+source_file="res://Assets/Shinrin-Yoku.ogg"
+dest_files=[ "res://.import/Shinrin-Yoku.ogg-0653be3c731246040f522d63aa40a463.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
